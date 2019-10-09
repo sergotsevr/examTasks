@@ -11,11 +11,9 @@ The exam includes 3 tasks to be done: [Calculator](/tasks/Calculator.md), [Pyram
 
 ### Result ###
 
-* Author name : {Сергей Гоцев}
-* Codeship : {PUT YOUR CODESHIP BAGDE HERE}
+* Author name : Гоцев Сергей
+* Codeship : [ ![Codeship Status for tschool/javaschoolexam](https://app.codeship.com/projects/6ef042d0-cc8a-0137-6cbc-3ec0699ccfcb/status?branch=master)](https://app.codeship.com/projects/6ef042d0-cc8a-0137-6cbc-3ec0699ccfcb)
 
-Example of Codeship badge. Please remove the example before you send us the link. 
-[ ![Codeship Status for tschool/javaschoolexam](https://app.codeship.com/projects/a9af8940-d130-0134-89a6-5e8aaaa2a5a2/status?branch=master)](https://app.codeship.com/projects/201451)
 
 
 ### How to start?  ###
