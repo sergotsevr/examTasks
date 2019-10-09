@@ -17,18 +17,16 @@ public class PyramidBuilder {
         try {
             Collections.sort(inputNumbers);
             int size = getDemention(inputNumbers);
-            if (size==-1){
+            if (size == -1) {
                 throw new CannotBuildPyramidException();
             }
             int array[][] = new int[size / 2][size - 2];
             int[][] pyramida = nullifier(array, size);
             pyramida = fillPyramid(inputNumbers, pyramida);
             return pyramida;
-        }
-        catch (Error error){
+        } catch (Error error) {
             throw new CannotBuildPyramidException();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             throw new CannotBuildPyramidException();
         }
     }
@@ -44,8 +42,9 @@ public class PyramidBuilder {
         }
         return array;
     }
+
     //nullifier создает массив заданного размера и обнуляет его элементы
-    public static int[][] nullifier( int[][] array, int size) {
+    public static int[][] nullifier(int[][] array, int size) {
         for (int i = 0; i < size / 2; i++) {
             for (int j = 0; j < size - 2; j++) {
                 array[i][j] = 0;
@@ -53,6 +52,7 @@ public class PyramidBuilder {
         }
         return array;
     }
+
     //получаем размер матрицы
     public static int getDemention(List<Integer> arr) {
         Double a = 1D;

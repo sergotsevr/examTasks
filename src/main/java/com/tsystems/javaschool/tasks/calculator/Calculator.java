@@ -15,18 +15,19 @@ public class Calculator {
         put("/", 2);
         put("<", 3);
     }};
+
     public String evaluate(String statement) {
         try {
             statement = addSpaces(statement);
             String result = calculate(statement);
-            result = result.replace(".0000","");
+            result = result.replace(".0000", "");
             return result;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             return null;
         }
 
     }
+
     public static String calculate(String expression) {
         if (expression == null) return null;
         BigDecimal result;
@@ -43,17 +44,17 @@ public class Calculator {
             result = result.setScale(4, BigDecimal.ROUND_HALF_UP);
             Double d = result.doubleValue();
             String str = d.toString();
-            str=insignificantZeros(str);
+            str = insignificantZeros(str);
             return str;
         } else return null;
     }
 
-    private static String insignificantZeros(String str){
-        if (str.substring(str.length()-2).equals(".0")){
-            return str.substring(0,str.length()-2);
-        }
-        else return str;
+    private static String insignificantZeros(String str) {
+        if (str.substring(str.length() - 2).equals(".0")) {
+            return str.substring(0, str.length() - 2);
+        } else return str;
     }
+
     private static List<String> toPostfix(String expression) throws Exception {
         expression = replaceSingleMinus(expression);
 
@@ -217,13 +218,12 @@ public class Calculator {
             char ch = charsList.get(i);
             if (ch >= 48 && ch <= 57 || ch == 46) {
                 continue;
-            } else if(ch==40 || ch==41 || ch==43|| ch==45  || ch==47|| ch==42){
+            } else if (ch == 40 || ch == 41 || ch == 43 || ch == 45 || ch == 47 || ch == 42) {
                 charsList.add(i, ' ');
                 i++;
                 charsList.add(i + 1, ' ');
                 i++;
-            }
-            else {
+            } else {
                 throw new Exception();
             }
         }

@@ -14,21 +14,20 @@ public class Subsequence {
      */
     @SuppressWarnings("rawtypes")
     public boolean find(List x, List y) {
-        // TODO: Implement the logic here
-        if(x == null || y == null){
+        if (x == null || y == null) {
             throw new IllegalArgumentException("argument is null");
         }
         int j = 0;
         for (int i = 0; i < x.size(); i++) {
             boolean find = false;
 
-            while (j < y.size()&&!find) {
+            while (j < y.size() && !find) {
                 if (x.get(i).equals(y.get(j))) {
-                    find=true;
+                    find = true;
                 }
                 j++;
             }
-            if(!find){
+            if (!find) {
                 return false;
             }
         }
